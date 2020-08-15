@@ -10,6 +10,7 @@ console.log("Hello world")
 
 g();
 g();
+g();
 
 
 
@@ -31,11 +32,63 @@ localvar();
 
 
 
+var outer = "shirt";
+function myouter() {
+    var outer = "coat";
+  return outer;
+
+}
+
+console.log(myouter());
+console.log(outer)
+
+
+
+function minus(num) {
+
+    return num -7;
+}
+
+console.log(minus(20));
 
 
 
 
+var sum = 0;
+function addthree() {
+  sum = sum +3;
+
+}
+console.log(sum)
+
+addthree();
+addthree();
+addthree();
 
 
 
+var changed = 0;
+ 
+  function change(dom) {
+     return (dom + 5) / 3;
+
+  }
+
+changed = change(10);
+
+console.log(changed)
+
+
+
+
+function nextline(arr, item) {
+    arr.push(item)
+    return arr.shift();
+}
+
+var testarr = [1,2,3,4,5];
+
+console.log("Before: " + JSON.stringify(testarr));
+console.log(nextline(testarr, 6));
+console.log("After: " + JSON.stringify(testarr));
 </script>
